@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><b>Bootstrap For Dummies</b></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#introduction">Introduction</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#getting_started">Tutorial</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#references">Additional Resources</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <section id="introduction">
+              <h1>Bootstrap For Dummies</h1><hr>
+              <p>If you're completely new to Web Development and you're looking to get
+                  your feet wet in easy and customizable styles, then you've come to the 
+                  right place. We will be covering the basics of Bootstrap including how to download,
+                  customize, and use Bootstrap in all your projects. This is not a comprehensive guide covering all the different 
+                  Bootstrap components and templates. Rather, this is a simple guide to help
+                  dummies like you and me, get started with using Bootstrap in web applications.
+              </p>
+              <h2>Why use Bootstrap?</h2><hr>
+              <p> Bootstrap was first released in 2011, and since then Bootstrap has become very popular in web development. 
+                  Why is bootrap so popular? Because Web designers and web developers find it extremely
+                  flexible and easy to work with. Some big advantages to Bootstrap are that it is responsive, meaning,
+                  it's compatible with wide browsers as well as smaller mobile browsers, it allows for consistent design with 
+                  re-usable components, and it is not difficult to learn how to use. These benifits allow web developers to focus
+                  on the actual development of their applications rather than the design. 
+              </p>
+              <h2>How does it work?</h2><hr>
+              <p> Bootstrap is basically just a large CSS file. If you are unfamiliar with CSS I've included some links at the 
+                  end of this article that will explain HTML5, CSS, and JavaScript so go check those out first.<br><br>
+                  The idea is that instead of you needing to style your entire page with your own CSS file, you can just use Bootstrap.
+                  Bootstrap can be included in your html by adding a link to the external Bootstrap in the <code>&lt;head&gt;</code> section of
+                  your html document or by downloading the Bootstrap source code files and adding them to your project. In this demo we will primarily
+                  focus on importing the external Bootstrap in the <code>&lt;head&gt;</code> of our documents.
+              </p>
+          </section><br><br>
+          <section id="getting_started">
+            <h2>Getting Started</h2><hr>
+                <p> Getting started with Bootstrap is super easy!<br><br>
+                    Let's begin by opening up a text editor (I prefer VS Code but you
+                    can use whatever text editor suites you best) and we will create a 
+                    basic skeleton of an HTML page. Title the page "index.html".</p>
+                    <div class="card-header">
+                        <code>&lt;!DOCTYPE html&gt;</code><br><br>
+                        <code>&lt;html&gt;</code><br><br>
+                        &nbsp; &nbsp; &nbsp; <code>&lt;head&gt;</code><br>
+                        <br>
+                        &nbsp; &nbsp; &nbsp; <code>&lt;/head&gt;</code><br><br>
+                        &nbsp; &nbsp; &nbsp; <code>&lt;body&gt;</code><br>
+                        <br>
+                        &nbsp; &nbsp; &nbsp; <code>&lt;/body&gt;</code><br><br>
+                        <code>&lt;/html&gt;</code><br><br>
+                    </div><br>
+                <p>Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> before all other stylesheets to load bootstrap CSS.
+                    Go to <a target="_blank" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap Introduction</a> for latest bootstrap link.
+                <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+                </code></pre></div>
+                </p><br>
+                <p>Many of the Bootstrap components require Javascript to function.
+                    Paste the <code>&lt;script&gt;</code> inside the <code>&lt;body&gt;</code> tags at the very bottom.
+                    Go to <a target="_blank" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap Introduction</a> for latest javascript link.
+                </p>
+                <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></code></div>
+                <p><br>
+                    Your index.html should now look like this: <br><br>
+                </p>
+<div class="codebox" style=" overflow:auto;width:auto;border:solid .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">&lt;!DOCTYPE html&gt;</span>
+    &lt;html&gt;
+
+        &lt;head&gt;
+            &lt;link href=<span style="color: #a31515">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css&quot;</span> rel=<span style="color: #a31515">&quot;stylesheet&quot;</span> integrity=<span style="color: #a31515">&quot;sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl&quot;</span> crossorigin=<span style="color: #a31515">&quot;anonymous&quot;</span>&gt;
+        &lt;/head&gt;
+
+        &lt;body&gt;
+
+            &lt;script src=<span style="color: #a31515">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js&quot;</span> integrity=<span style="color: #a31515">&quot;sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0&quot;</span> crossorigin=<span style="color: #a31515">&quot;anonymous&quot;</span>&gt;&lt;/script&gt;
+        &lt;/body&gt;
+
+    &lt;/html&gt;
+</pre></div><br><br>
+
+                <p>Great! All done! You are now ready to begin using Bootstrap templates and elements in your code. In the next section we
+                    will go over how to use bootstrap navbars and forms. Navbars and Forms are two special Bootstrap templates (css code)
+                    that will make it easy for you to contruct pre-styled navbars and forms on your own website. There are hundreds of different
+                    Bootstrap templates so when you are done with this quick tutorial head over to the <a target="_blank" href="https://getbootstrap.com/">Bootstrap Website</a>
+                    and start learning how to included other fun templates in your html code. Be creative!
+                </p>
+          </section><br><br>
+
+          <section id="navbars">
+            <h2>Navbars</h2><hr>
+            <p> 
+                By definition, "A navigation bar is a user interface element within a webpage that contains links to other sections of the website. In most cases, the navigation bar is part of the main website template, which means it is displayed on most, if not all, pages within the website. This means that no matter what page you are viewing, you can use the navigation bar to visit other sections of the website."
+          </p>
+          <br>
+          <p>If you wanted to, you could create your own html navbar and use CSS to style it, but
+              but Bootstrap makes navbars really easy by giving you several different templates to choose from 
+              that are already styled for you. In the navbar tutorial we will be making a simple navbar like the one below
+              using bootstrap.
+          </p>
+          <br>
+          <div class="bd-example">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+            </div><br><br>
+
+            <p>In about 1 more minute you will have a fully functional navbar. Simply
+                head to the <a href="https://getbootstrap.com/docs/5.0/components/navbar/" target="_blank">Bootstrap Navbar Documentation</a>
+                and copy the template for the any one of the navbars you like. Below is an example of one of the navbar templates.
+                You may copy this if you wish.
+            </p>
+<div class="codebox" style="overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;nav class=<span style="color: #a31515">&quot;navbar navbar-expand-lg navbar-light bg-light&quot;</span>&gt;
+    &lt;div class=<span style="color: #a31515">&quot;container-fluid&quot;</span>&gt;
+    &lt;a class=<span style="color: #a31515">&quot;navbar-brand&quot;</span> href=<span style="color: #a31515">&quot;#&quot;</span>&gt;Navbar&lt;/a&gt;
+    &lt;button class=<span style="color: #a31515">&quot;navbar-toggler&quot;</span> type=<span style="color: #a31515">&quot;button&quot;</span> data-bs-toggle=<span style="color: #a31515">&quot;collapse&quot;</span> data-bs-target=<span style="color: #a31515">&quot;#navbarSupportedContent&quot;</span> aria-controls=<span style="color: #a31515">&quot;navbarSupportedContent&quot;</span> aria-expanded=<span style="color: #a31515">&quot;false&quot;</span> aria-label=<span style="color: #a31515">&quot;Toggle navigation&quot;</span>&gt;
+        &lt;span class=<span style="color: #a31515">&quot;navbar-toggler-icon&quot;</span>&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=<span style="color: #a31515">&quot;collapse navbar-collapse&quot;</span> id=<span style="color: #a31515">&quot;navbarSupportedContent&quot;</span>&gt;
+        &lt;ul class=<span style="color: #a31515">&quot;navbar-nav me-auto mb-2 mb-lg-0&quot;</span>&gt;
+        &lt;li class=<span style="color: #a31515">&quot;nav-item&quot;</span>&gt;
+            &lt;a class=<span style="color: #a31515">&quot;nav-link active&quot;</span> aria-current=<span style="color: #a31515">&quot;page&quot;</span> href=<span style="color: #a31515">&quot;#&quot;</span>&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=<span style="color: #a31515">&quot;nav-item&quot;</span>&gt;
+            &lt;a class=<span style="color: #a31515">&quot;nav-link&quot;</span> href=<span style="color: #a31515">&quot;#&quot;</span>&gt;Link&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=<span style="color: #a31515">&quot;nav-item dropdown&quot;</span>&gt;
+            &lt;a class=<span style="color: #a31515">&quot;nav-link dropdown-toggle&quot;</span> href=<span style="color: #a31515">&quot;#&quot;</span> id=<span style="color: #a31515">&quot;navbarDropdown&quot;</span> role=<span style="color: #a31515">&quot;button&quot;</span> data-bs-toggle=<span style="color: #a31515">&quot;dropdown&quot;</span> aria-expanded=<span style="color: #a31515">&quot;false&quot;</span>&gt;
+            Dropdown
+            &lt;/a&gt;
+            &lt;ul class=<span style="color: #a31515">&quot;dropdown-menu&quot;</span> aria-labelledby=<span style="color: #a31515">&quot;navbarDropdown&quot;</span>&gt;
+            &lt;li&gt;&lt;a class=<span style="color: #a31515">&quot;dropdown-item&quot;</span> href=<span style="color: #a31515">&quot;#&quot;</span>&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class=<span style="color: #a31515">&quot;dropdown-item&quot;</span> href=<span style="color: #a31515">&quot;#&quot;</span>&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;hr class=<span style="color: #a31515">&quot;dropdown-divider&quot;</span>&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class=<span style="color: #a31515">&quot;dropdown-item&quot;</span> href=<span style="color: #a31515">&quot;#&quot;</span>&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=<span style="color: #a31515">&quot;nav-item&quot;</span>&gt;
+            &lt;a class=<span style="color: #a31515">&quot;nav-link disabled&quot;</span> href=<span style="color: #a31515">&quot;#&quot;</span> tabindex=<span style="color: #a31515">&quot;-1&quot;</span> aria-disabled=<span style="color: #a31515">&quot;true&quot;</span>&gt;Disabled&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;form class=<span style="color: #a31515">&quot;d-flex&quot;</span>&gt;
+        &lt;input class=<span style="color: #a31515">&quot;form-control me-2&quot;</span> type=<span style="color: #a31515">&quot;search&quot;</span> placeholder=<span style="color: #a31515">&quot;Search&quot;</span> aria-label=<span style="color: #a31515">&quot;Search&quot;</span>&gt;
+        &lt;button class=<span style="color: #a31515">&quot;btn btn-outline-success&quot;</span> type=<span style="color: #a31515">&quot;submit&quot;</span>&gt;Search&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+    </pre></div>
+            <br><br>
+
+            <p>Once you have selected a template to use for your navbar, simply 
+                paste the navbar html code between the body tags of your index.html document.
+                Vwa-Lah!! You can now open your index.html in your browser and you will see a navbar 
+                at the top of the page.
+            </p>
+          </section><br><br>
+
+          <section id="Forms">
+            <h2>Forms</h2><hr>
+            <p> By definition, "a webform, web form or HTML form on a web page allows a user to enter data that is sent to a server for processing. Forms can resemble paper or database forms because web users fill out the forms using checkboxes, radio buttons, or text fields. For example, forms can be used to enter shipping or credit card data to order a product, or can be used to retrieve search results from a search engine."</p>
+            <br>
+            <p>Creating forms in html that look neat and function like they are supposed to can be difficult. 
+                Designing a webapp should be fun and easy! Thanks to Bootstrap we can create a simple pre-styled form in under
+                5 minutes. Are you ready? Let's start!
+            </p>
+            <br>
+            <p>In this tutorial we will be creating a form like the one you see below.</p><br>
+            <form class="example-form row g-3">
+                <div class="col-md-4">
+                  <label for="validationServer01" class="form-label">First name</label>
+                  <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationServer02" class="form-label">Last name</label>
+                  <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationServerUsername" class="form-label">Username</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                    <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                    <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                      Please choose a username.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationServer03" class="form-label">City</label>
+                  <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                  <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationServer04" class="form-label">State</label>
+                  <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                  <div id="validationServer04Feedback" class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationServer05" class="form-label">Zip</label>
+                  <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+                  <div id="validationServer05Feedback" class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                    <label class="form-check-label" for="invalidCheck3">
+                      Agree to terms and conditions
+                    </label>
+                    <div id="invalidCheck3Feedback" class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+              </form><br><br>
+              <p> Begin by
+                heading to the <a href="https://getbootstrap.com/docs/5.0/forms/validation/" target="_blank">Bootstrap Form Documentation</a>
+                and copy the template for the any one of the forms you like. Below is an example of one of the form templates. Keep in mind that
+                this is a validation form. Bootstrap has many other types of forms you can choose from. You may copy the code below if you wish.</p>
+
+<div class="codebox"style="overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;form class=<span style="color: #a31515">&quot;row g-3&quot;</span>&gt;
+    &lt;div class=<span style="color: #a31515">&quot;col-md-4&quot;</span>&gt;
+    &lt;label for=<span style="color: #a31515">&quot;validationServer01&quot;</span> class=<span style="color: #a31515">&quot;form-label&quot;</span>&gt;First name&lt;/label&gt;
+    &lt;input type=<span style="color: #a31515">&quot;text&quot;</span> class=<span style="color: #a31515">&quot;form-control is-valid&quot;</span> id=<span style="color: #a31515">&quot;validationServer01&quot;</span> value=<span style="color: #a31515">&quot;Mark&quot;</span> required&gt;
+    &lt;div class=<span style="color: #a31515">&quot;valid-feedback&quot;</span>&gt;
+      Looks good!
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=<span style="color: #a31515">&quot;col-md-4&quot;</span>&gt;
+    &lt;label for=<span style="color: #a31515">&quot;validationServer02&quot;</span> class=<span style="color: #a31515">&quot;form-label&quot;</span>&gt;Last name&lt;/label&gt;
+    &lt;input type=<span style="color: #a31515">&quot;text&quot;</span> class=<span style="color: #a31515">&quot;form-control is-valid&quot;</span> id=<span style="color: #a31515">&quot;validationServer02&quot;</span> value=<span style="color: #a31515">&quot;Otto&quot;</span> required&gt;
+    &lt;div class=<span style="color: #a31515">&quot;valid-feedback&quot;</span>&gt;
+      Looks good!
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=<span style="color: #a31515">&quot;col-md-4&quot;</span>&gt;
+    &lt;label for=<span style="color: #a31515">&quot;validationServerUsername&quot;</span> class=<span style="color: #a31515">&quot;form-label&quot;</span>&gt;Username&lt;/label&gt;
+    &lt;div class=<span style="color: #a31515">&quot;input-group has-validation&quot;</span>&gt;
+      &lt;span class=<span style="color: #a31515">&quot;input-group-text&quot;</span> id=<span style="color: #a31515">&quot;inputGroupPrepend3&quot;</span>&gt;@&lt;/span&gt;
+      &lt;input type=<span style="color: #a31515">&quot;text&quot;</span> class=<span style="color: #a31515">&quot;form-control is-invalid&quot;</span> id=<span style="color: #a31515">&quot;validationServerUsername&quot;</span> aria-describedby=<span style="color: #a31515">&quot;inputGroupPrepend3 validationServerUsernameFeedback&quot;</span> required&gt;
+      &lt;div id=<span style="color: #a31515">&quot;validationServerUsernameFeedback&quot;</span> class=<span style="color: #a31515">&quot;invalid-feedback&quot;</span>&gt;
+        Please choose a username.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=<span style="color: #a31515">&quot;col-md-6&quot;</span>&gt;
+    &lt;label for=<span style="color: #a31515">&quot;validationServer03&quot;</span> class=<span style="color: #a31515">&quot;form-label&quot;</span>&gt;City&lt;/label&gt;
+    &lt;input type=<span style="color: #a31515">&quot;text&quot;</span> class=<span style="color: #a31515">&quot;form-control is-invalid&quot;</span> id=<span style="color: #a31515">&quot;validationServer03&quot;</span> aria-describedby=<span style="color: #a31515">&quot;validationServer03Feedback&quot;</span> required&gt;
+    &lt;div id=<span style="color: #a31515">&quot;validationServer03Feedback&quot;</span> class=<span style="color: #a31515">&quot;invalid-feedback&quot;</span>&gt;
+      Please provide a valid city.
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=<span style="color: #a31515">&quot;col-md-3&quot;</span>&gt;
+    &lt;label for=<span style="color: #a31515">&quot;validationServer04&quot;</span> class=<span style="color: #a31515">&quot;form-label&quot;</span>&gt;State&lt;/label&gt;
+    &lt;select class=<span style="color: #a31515">&quot;form-select is-invalid&quot;</span> id=<span style="color: #a31515">&quot;validationServer04&quot;</span> aria-describedby=<span style="color: #a31515">&quot;validationServer04Feedback&quot;</span> required&gt;
+      &lt;option selected disabled value=<span style="color: #a31515">&quot;&quot;</span>&gt;Choose...&lt;/option&gt;
+      &lt;option&gt;...&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div id=<span style="color: #a31515">&quot;validationServer04Feedback&quot;</span> class=<span style="color: #a31515">&quot;invalid-feedback&quot;</span>&gt;
+      Please select a valid state.
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=<span style="color: #a31515">&quot;col-md-3&quot;</span>&gt;
+    &lt;label for=<span style="color: #a31515">&quot;validationServer05&quot;</span> class=<span style="color: #a31515">&quot;form-label&quot;</span>&gt;Zip&lt;/label&gt;
+    &lt;input type=<span style="color: #a31515">&quot;text&quot;</span> class=<span style="color: #a31515">&quot;form-control is-invalid&quot;</span> id=<span style="color: #a31515">&quot;validationServer05&quot;</span> aria-describedby=<span style="color: #a31515">&quot;validationServer05Feedback&quot;</span> required&gt;
+    &lt;div id=<span style="color: #a31515">&quot;validationServer05Feedback&quot;</span> class=<span style="color: #a31515">&quot;invalid-feedback&quot;</span>&gt;
+      Please provide a valid zip.
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=<span style="color: #a31515">&quot;col-12&quot;</span>&gt;
+    &lt;div class=<span style="color: #a31515">&quot;form-check&quot;</span>&gt;
+      &lt;input class=<span style="color: #a31515">&quot;form-check-input is-invalid&quot;</span> type=<span style="color: #a31515">&quot;checkbox&quot;</span> value=<span style="color: #a31515">&quot;&quot;</span> id=<span style="color: #a31515">&quot;invalidCheck3&quot;</span> aria-describedby=<span style="color: #a31515">&quot;invalidCheck3Feedback&quot;</span> required&gt;
+      &lt;label class=<span style="color: #a31515">&quot;form-check-label&quot;</span> for=<span style="color: #a31515">&quot;invalidCheck3&quot;</span>&gt;
+        Agree to terms and conditions
+      &lt;/label&gt;
+      &lt;div id=<span style="color: #a31515">&quot;invalidCheck3Feedback&quot;</span> class=<span style="color: #a31515">&quot;invalid-feedback&quot;</span>&gt;
+        You must agree before submitting.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=<span style="color: #a31515">&quot;col-12&quot;</span>&gt;
+    &lt;button class=<span style="color: #a31515">&quot;btn btn-primary&quot;</span> type=<span style="color: #a31515">&quot;submit&quot;</span>&gt;Submit form&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre></div>
+
+            <br><br>
+            <p>Once you have selected a template to use for your form, simply paste the form html code between the body tags of your index.html document below your navbar. Vwa-Lah!! You can now open your index.html in your browser and you will see a form on the page.</p><br>
+            <p>
+                We are not done yet though. As you can see your form looks a little strange
+                and spans the entire width of the page. That's not what we want so we are going to 
+                do a little bit of custom styling of our own to clean this form up a bit.
+            </p><br>
+            <p>To customize our Bootstrap template we are going to create
+                a CSS file of our own. We will be pasting the link to our CSS style 
+                sheet below the Bootstrap stylesheet link. It is important that your
+                CSS stylesheet link is pasted below the Bootstrap link so that your style 
+                modifications override the Boostrap default styles.
+            </p>
+            <p>
+                Begin by navigating to the same folder as your index.html. Once inside the folder
+                create a document called style.css. To link your CSS to your index.html page, paste this 
+                code in the <code>&lt;head&gt;</code> section of your code BELOW the Bootstrap link.
+            </p>
+            <p>
+            <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;style.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span><span class="p">&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+            </code></pre></div>
+            </p><br>
+            <p>In your index.html find the opening <code>&lt;form&gt;</code> tag and inside of the tag add class="myform".
+            Your opening form tag should look like this.</p>
+            <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;myform row g-3&#34;</span>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </code></pre></div>
+            <p>
+                Now open the style.css and add the following code.
+            </p>
+
+<div class="codebox" style="overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #2b91af">.myform</span> {
+    <span style="color: #0000ff">margin-top</span>: 40px;
+    <span style="color: #0000ff">margin-left</span>: 20%;
+    <span style="color: #0000ff">margin-right</span>: 20%;
+    <span style="color: #0000ff">border</span>: 0.5px <span style="color: #0000ff">solid</span> gray;
+    <span style="color: #0000ff">padding</span>: 10px;
+}
+</pre></div><br>
+            <p>Make sure to save both the index.html and the style.css and then open 
+                index.html in your browser and refresh the page. You will see that your stylesheet 
+                now overrides the css from Bootstrap and allowed you to customize the form by changing the form 
+                width, padding, and margins, and adding a thin border around the form.
+            </p>
+
+          </section><br><br>
+
+          <section id="conclusion">
+            <h2>Conclusion</h2><hr>
+            <p> Congratulations! You have now learned what Bootstrap is, how to import Bootstrap into 
+                your projects, and how to customize Bootstrap using your own stylesheets. In this tutorial we have 
+                barely scratched the surface of all the amazing templates and components that Bootstrap has to offer.
+                I would encourage you to explore Bootstrap further on the <a target="_blank" href="https://getbootstrap.com/">Bootstrap Official Website</a>.
+            </p>
+          </section><br><br>
+
+          <section id="references">
+            <h2>Additional Resources</h2><hr>
+            <p>
+                I have added some references I think will come in handy as you continue 
+                your journey to becoming a Bootstrap master. If you found this tutorial helpful
+                feel free to share it with others. If not, that's okay too! Remember, there are millions 
+                of resources on the internet. Keep searching until you find something that works for you!
+            </p><br>
+            <div class="list-group">
+                This link is a good in-depth overview of CSS, what it is for, and how to use it.
+                The writing style is a bit more on the technical side so be sure to read slow and 
+                practice coding as you go.<br><br>
+                
+                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" class="list-group-item list-group-item-action" aria-current="true">
+                  What is CSS?
+                </a><br>
+
+                This link is a good in-depth overview of JavaScript, what it is for, and how to use it.
+                Like the CSS link above, the writing style is a bit more on the technical side so again be sure to read slow and 
+                practice coding as you go.<br><br>
+                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" class="list-group-item list-group-item-action">What is JavaScript?</a><br>
+
+                In my experience it is sometimes easier to follow a video tutorial. I've included 
+                the following simple video tutorial on Bootstrap which will cover the content in this 
+                article but in more depth.<br><br>
+                <a target="_blank" href="https://www.youtube.com/watch?v=Rp7Wws5I970" class="list-group-item list-group-item-action">How to download and use Bootstrap</a><br>
+
+                Last but not least I've included a link to an article that will show you some of the cool new
+                Bootstrap features that have come out recently. Try adding these to your code to make your 
+                websites more artistic and dynamic. Have fun coding!<br><br>
+                <a target="_blank" href="https://www.hongkiat.com/blog/boostrap-4-best-features/" class="list-group-item list-group-item-action">Cool new Bootstrap Features</a><br>
+              </div>
+            
+          </section>
+          <br>
+          © 2021 Tucker Weibell
+          <br>
+          <br>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    </body>
+
+</html>
+
+
+
+
+
+
+
